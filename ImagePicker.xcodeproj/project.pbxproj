@@ -13,6 +13,7 @@
 		EB9DD54525A5730D0050E19E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9DD54425A5730D0050E19E /* Assets.xcassets */; };
 		EB9DD54825A5730D0050E19E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB9DD54725A5730D0050E19E /* Preview Assets.xcassets */; };
 		EB9DD54B25A5730D0050E19E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB9DD54925A5730D0050E19E /* LaunchScreen.storyboard */; };
+		EB9DD55525A581580050E19E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9DD55425A581580050E19E /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EB9DD54725A5730D0050E19E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB9DD54A25A5730D0050E19E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB9DD54C25A5730D0050E19E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB9DD55425A581580050E19E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				EB9DD54925A5730D0050E19E /* LaunchScreen.storyboard */,
 				EB9DD54C25A5730D0050E19E /* Info.plist */,
 				EB9DD54625A5730D0050E19E /* Preview Content */,
+				EB9DD55425A581580050E19E /* ImagePicker.swift */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB9DD53F25A5730B0050E19E /* AppDelegate.swift in Sources */,
+				EB9DD55525A581580050E19E /* ImagePicker.swift in Sources */,
 				EB9DD54125A5730B0050E19E /* SceneDelegate.swift in Sources */,
 				EB9DD54325A5730B0050E19E /* ContentView.swift in Sources */,
 			);
@@ -291,6 +295,7 @@
 				DEVELOPMENT_TEAM = K924X73642;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ImagePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tanvirgeek.ImagePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,6 +317,7 @@
 				DEVELOPMENT_TEAM = K924X73642;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ImagePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tanvirgeek.ImagePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

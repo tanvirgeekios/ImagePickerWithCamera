@@ -8,9 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showSheet = false
+    @State private var showImagePicker = false
+    @State private var sourceType : UIImagePickerController.SourceType = .camera
+    @State private var image:UIImage?
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            VStack{
+                Image(uiImage: image ?? UIImage(named: "placeholder")!)
+                    .resizable()
+                    .frame(width:300,height: 300)
+                
+                Button(action: {
+                    self.showSheet = true
+                }, label: {
+                    Text("Choose Picture")
+                }).padding()
+                .actionSheet(isPresented: $showSheet) {
+                    ActionSheet(title: Text("Select a photo"), message: Text("Choose"), buttons: [.default(Text("Photo Library")){
+                        self.showImagePicker = true
+                        self.sourceType = .photoLibrary
+                    },
+                    .default(Text("Camera")){
+                        self.showImagePicker = true
+                        self.sourceType = .camera
+                    },
+                    .cancel()
+                    ])
+                }
+            }.navigationBarTitle("Camera Demo")
+        }.sheet(isPresented: $showImagePicker) {
+            ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
+        }
     }
 }
 
